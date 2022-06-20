@@ -34,9 +34,9 @@ const ApplicationSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    packageType:{
-        type: String,
-        required: true
+    packageType: {
+      type: String,
+      required: true,
     },
     country: {
       type: String,
@@ -46,41 +46,42 @@ const ApplicationSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    depositAllowed1: {
+      type: Boolean,
+      required: true,
+    },
+    amount1ToPay: {
+      type: Number,
+      required: true,
+    },
     currency1: {
       type: String,
       required: true,
     },
-    currentRateUsed1: {
-      type: String,
-      default: "",
-    },
-    amount1Paid: {
-      type: Number,
-      default: null,
-    },
 
     amount1Remaining: {
       type: Number,
+      required: true,
     },
 
     amount1Status: {
       type: Number,
-      default: 0, // 0 for not paid, 1 for awaiting approval for part payment, 2 for confirmed for part payment, 3 for not paid balanc e, 4, for awaiting approval for full payment, 5 for confirmed for all
+      default: 0, // 0 for not paid any, 1 for awaiting approval for part payment, 2 for confirmed for part payment, 3 for not paid balance, 4, for awaiting approval for full payment, 5 for confirmed for all
     },
 
     amount2: {
       type: Number,
     },
+    depositAllowed2: {
+      type: Boolean,
+    },
+
     currency2: {
       type: String,
     },
-    currentRateUsed2: {
-      type: String,
-      default: "",
-    },
-    amount2Paid: {
+
+    amount2ToPay: {
       type: Number,
-      default: null,
     },
 
     amount2Remaining: {
@@ -94,16 +95,14 @@ const ApplicationSchema = new mongoose.Schema(
     familyPayment: {
       type: Number,
     },
+    familyDepositAllowed: {
+      type: Boolean,
+    },
     familyCurrency: {
       type: String,
     },
-    familyCurrencyRate: {
-      type: String,
-      default: "",
-    },
-    familyAmountPaid: {
+    familyAmountToPay: {
       type: Number,
-      default: null,
     },
 
     familyAmountRemaining: {
@@ -114,6 +113,14 @@ const ApplicationSchema = new mongoose.Schema(
       type: Number,
       default: 0, // 0 for not paid, 1 for awaiting approval for part payment, 2 for confirmed for part payment, 3 for not paid balanc e, 4, for awaiting approval for full payment, 5 for confirmed for all
     },
+    currencyRates:{
+      type: Object,
+      default:{}
+    },
+    proofUrl:{
+      type: String,
+      default:""
+    }
   },
   { timestamps: true }
 );
