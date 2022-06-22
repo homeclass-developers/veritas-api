@@ -111,13 +111,23 @@ const ApplicationSchema = new mongoose.Schema(
 
     familyPaymentStatus: {
       type: Number,
-      default: 0, // 0 for not paid, 1 for awaiting approval for part payment, 2 for confirmed for part payment, 3 for not paid balanc e, 4, for awaiting approval for full payment, 5 for confirmed for all
+      default: 0, // 0 for not paid, 1 for awaiting approval for part payment, 2 for confirmed for part payment, 3 for not paid balance, 4, for awaiting approval for full payment, 5 for confirmed for all
     },
     currencyRates:{
       type: Object,
       default:{}
     },
+    currencyRates2:{
+      type: Object,
+      default:{}
+    },
     proofUrl:{
+      type: String,
+      default:""
+    },
+
+    // proof url for second payment
+    proofUrl2:{
       type: String,
       default:""
     }
