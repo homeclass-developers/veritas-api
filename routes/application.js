@@ -45,7 +45,7 @@ applicationRouter.post(
               "You have already applied for this package. Please ensure you make payment if you have not done so. Payment validates slot",
           });
         } else {
-          //Get the number of slot, compare it with validapplication, perform logic, then save
+          //Get the number of slot, compare it with valid application, perform logic, then save
           Packages.findOne({ _id: packageId }).then((package) => {
             if (package) {
               Applications.countDocuments(
