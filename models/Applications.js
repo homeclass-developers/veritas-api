@@ -28,7 +28,6 @@ const ApplicationSchema = new mongoose.Schema(
     },
     numberOfFamily: {
       type: Number,
-      default: null,
     },
     processingTime: {
       type: String,
