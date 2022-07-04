@@ -116,7 +116,7 @@ applicationRouter.post(
                           <p>Your Veritas Visa Application package(${application.serviceName}) has been successfully submitted. Please note that 
                             no slot has been booked yet until when payment is made and confirmed. 
                           </p>
-                          <p>Kindly Pay into the following account details below <br /.
+                          <p>Kindly Pay into the following account details below <br />
                               Account Name: UflyRight Enterprises<br />
                               Account Number: 1016335342 <br />
                               Bank Name: Zenith Bank
@@ -125,11 +125,11 @@ applicationRouter.post(
                           Should you need any support or more information, please send us a mail at 
                           support@homeclassgroup.com or call us on the following numbers<br />
                           <ul>
-                            <l1>Phone Line 1</li>
+                            <l1>09123904877</li>
                           </ul>
 
                           </p>
-                          <p>Thank You <br />Homeclass Group</p>
+                          <p>Thank You <br />HomeClass Team</p>
                         
                         `;
 
@@ -240,15 +240,15 @@ applicationRouter.post(
               const subject =
                 "Awaiting Payment Confirmation for your Veritas Payment";
               const message = `<h4>Dear ${cus.cus_first_name}</h4>
-                <p>We acknowledge the receipt of your payment proof. It will be confirmed within the hour</p>
+                <p>We acknowledge the receipt of your payment proof. It will be confirmed within active business hours</p>
                 <p>Should you need any support or more information, please send us a mail at 
                 support@homeclassgroup.com or call us on the following numbers<br />
                 <ul>
-                  <l1>Phone Line 1</li>
+                  <l1>09123904877</li>
                 </ul>
 
                 </p>
-                <p>Thank You <br />Homeclass Group</p>
+                <p>Thank You <br />HomeClass Team</p>
               `;
 
               sendEmailNotification(cus.cus_email, subject, message);
@@ -406,11 +406,11 @@ applicationRouter.post(
                 <p>Should you need any support or more information, please send us a mail at 
                 support@homeclassgroup.com or call us on the following numbers<br />
                 <ul>
-                  <l1>Phone Line 1</li>
+                  <l1>09123904877</li>
                 </ul>
 
                 </p>
-                <p>Thank You <br />Homeclass Group</p>
+                <p>Thank You <br />HomeClass Team</p>
               `;
 
               sendEmailNotification(cus.cus_email, subject, message);
