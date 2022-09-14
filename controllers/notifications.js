@@ -10,7 +10,7 @@ const sendEmailNotification = (to, subject, html)=>{
       secure: true,
       auth: {
         user: "noreply@homeclassgroup.com",
-        pass: "Homeclass2021@@",
+        pass: process.env.PASS,
       },
         tls: {
             rejectUnauthorized: false
